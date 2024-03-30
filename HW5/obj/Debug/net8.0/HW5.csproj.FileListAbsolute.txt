@@ -12,3 +12,4 @@ C:\Users\iskos\RiderProjects\Longest-common-subsequence-Levenshtein-distance\HW5
 C:\Users\iskos\RiderProjects\Longest-common-subsequence-Levenshtein-distance\HW5\obj\Debug\net8.0\HW5.pdb
 C:\Users\iskos\RiderProjects\Longest-common-subsequence-Levenshtein-distance\HW5\obj\Debug\net8.0\HW5.genruntimeconfig.cache
 C:\Users\iskos\RiderProjects\Longest-common-subsequence-Levenshtein-distance\HW5\obj\Debug\net8.0\ref\HW5.dll
+C:\Users\iskos\RiderProjects\Longest-common-subsequence-Levenshtein-distance\HW5\obj\Debug\net8.0\HW5.sourcelink.json

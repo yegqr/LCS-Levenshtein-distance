@@ -42,15 +42,15 @@ public class WorkingWithInput
         return result ;
     }
 
-    public static int LCS(string word1, string word2)
+    public static int LD(string word1, string word2)
     {
-        var LCS =  new int[word1.Length + 1 , word2.Length + 1 ];
+        var LD =  new int[word1.Length + 1 , word2.Length + 1 ];
 
-        LCS[0, 0] = 0;
+        LD[0, 0] = 0;
         for (int i = 0; i <= word1.Length; i++)
-            LCS[i, 0] = 0;
-        for (int j = 0; j <= word2.Length; j++)
-            LCS[0, j] = 0;
+            LD[i, 0] = i;
+        for (int i = 0; i <= word2.Length; i++)
+            LD[0, i] = i;
         
         for (int i = 1; i < word1.Length +1 ; i++)
         {
@@ -58,15 +58,15 @@ public class WorkingWithInput
             {
                 if (word1[i - 1] == word2[j - 1])
                 {
-                    LCS[i, j] = LCS[i - 1, j - 1] + 1; 
+                    LD[i, j] = Math.Min(LD[i - 1, j - 1], Math.Min(LD[i, j - 1] + 1 , LD[i - 1, j] + 1));
                 }
                 else
                 {
-                    LCS[i , j] = Math.Max(LCS[i - 1 ,j], LCS[i ,j - 1]);
+                    LD[i, j] = Math.Min(LD[i - 1, j - 1] + 1, Math.Min(LD[i, j - 1] + 1 , LD[i - 1, j] + 1));
                 }
             }
         }
 
-        return LCS[word1.Length, word2.Length];
+        return LD[word1.Length, word2.Length];
     }
 }
